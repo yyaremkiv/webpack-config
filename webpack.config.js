@@ -30,6 +30,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "partials", "header.html"),
+      filename: path.resolve(__dirname, "src", "index.html"),
+      inject: true,
+    }),
   ],
   module: {
     rules: [
